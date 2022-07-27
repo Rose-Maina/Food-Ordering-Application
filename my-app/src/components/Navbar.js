@@ -1,45 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
     return (
         <>
-           <Nav>
-            <NavLogo to="/">
-                Logo
-            </NavLogo>
-            <Bars />
-
-            <NavMenu>
-                <NavLink 
-                  to="/"
-                  activeStyle={{ color:'black' }}
-                >
-                    Home
-                </NavLink>
-                <NavLink 
-                  to="/about"
-                  activeStyle={{ color: 'black' }}
-                >
-                    About
-                </NavLink>
-                <NavLink 
-                  to="/contact" 
-                  activeStyle={{ color: 'black' }}
-                >
-                    Contact
-                </NavLink>
-                <NavLink
-                  to="/signin"
-                  activeStyle={{ color: 'black' }}
-                >
-                    Sign In
-                </NavLink>
-                <NavBtn>
-                    <NavBtnLink to="/sign-up">Sign Up</NavBtnLink>
-                </NavBtn>
-            </NavMenu>
-           </Nav> 
+          <nav className="navbar bg-light">
+            <div className="container-fluid">
+                <ul className="navbar-nav">
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/">Home</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/about">About</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/contact">Contact</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/signin">Signin</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/signup">Signup</Link>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         </>
     );
 };
