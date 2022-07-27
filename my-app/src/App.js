@@ -9,10 +9,6 @@ function App() {
         <Navbar/>
       </div>
 
-      <Routes>
-
-V     </Routes>
-
     </Router>
    
   );
