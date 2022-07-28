@@ -1,13 +1,34 @@
-import React, { Component } from "react";
- 
-class Home extends Component {
-  render() {
-    return (
-      <div>
-        <h2 >Yummy Treats</h2>
-      </div>
-    );
-  }
+import React, { useEffect, useState } from "react";
+import MenuCard from "./MenuCard";
+
+const RestaurantMeals = "https://afternoon-bastion-34435.herokuapp.com/menu"
+
+function Home(){
+
+const [meals, setMeals] = useState([])
+// load items from the API
+const mealFetcher = () => {
+    fetch(RestaurantMeals)
+        .then((response) => response.json())
+        .then((data) => {
+            setMeals(data.meals)}
+)
+        }
+    
+useEffect(
+    mealFetcher, []
+    )
+let menuCards = meals.map((meal) => (<MenuCard mealName={meal.title} mealImage={meal.img} mealPrice={meal.price} key={meal.id}/>))
+
+return(
+    <div className="container">
+        Home
+        <div className="row">
+        {menuCards}
+        </div>
+        
+    </div>
+)
 }
- 
-export default Home;
+
+ export default Home;
