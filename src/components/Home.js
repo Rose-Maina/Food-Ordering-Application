@@ -11,7 +11,7 @@ const mealFetcher = () => {
     fetch(RestaurantMeals)
         .then((response) => response.json())
         .then((data) => {
-            setMeals(data.meals)}
+            setMeals(data)}
 )
         }
     
@@ -22,7 +22,6 @@ let menuCards = meals.map((meal) => (<MenuCard mealName={meal.title} mealImage={
 
 return(
     <div className="container">
-        Home
         <div className="row">
         {menuCards}
         </div>

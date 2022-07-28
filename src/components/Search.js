@@ -26,12 +26,7 @@ export default function Search(){
         .then((data) => {
             setSearchItem("")
             setResults(data.meals == null ? 0 : data.meals.length )
-            // data.forEach( (meal) => {
-            //     setTitle(meal.strMeal)
-            //     setCategory(meal.strCategory)
-            //     setInstructions(meal.strInstructions)
-            //     setImage(meal.strMealThumb)
-            // } ) 
+            
         })
     }
 
