@@ -1,6 +1,12 @@
 .App {
     justify-content: center;
-    background-image: url(https://uicookies.com/wp-content/uploads/2020/10/restaurano-food-website-template.png.webp);
   }
+h1 {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:medium;
+  font-weight: bolder;
+  font-style: italic;
+}
   
   
