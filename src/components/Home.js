@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { alignPropType } from "react-bootstrap/esm/types";
 import MenuCard from "./MenuCard";
 
-const RestaurantMeals = "https://secret-citadel-90517.herokuapp.com/menu"
+const RestaurantMeals = "https://afternoon-bastion-34435.herokuapp.com/menu"
 
 function Home(){
 
@@ -18,10 +19,12 @@ const mealFetcher = () => {
 useEffect(
     mealFetcher, []
     )
-let menuCards = meals.map((meal) => (<MenuCard mealName={meal.itemName} mealImage={meal.img} mealPrice={meal.price} key={meal.id}/>))
+let menuCards = meals.map((meal) => (<MenuCard mealName={meal.itemName} mealImage={meal.img} mealPrice={meal.price} mealCategory={meal.category}key={meal.id}/>))
 
 return(
-    <div className="container">
+    <div className="container text-center bg-green" >
+        <h2>Menu</h2>
+        <p>Whether It Is Time To Break Your Fast, Have Lunch Or Get Some Dinner? Simply Get It From The Best</p>
         <div className="row">
         {menuCards}
         </div>
