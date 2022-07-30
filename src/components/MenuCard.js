@@ -1,19 +1,21 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-
-export default function MenuCard({mealName, mealImage, mealPrice, mealId}){
+export default function MenuCard({mealName, mealImage, mealPrice, mealCategory}){
 
     return (
-        <div className="card" style={{width: 18 + "rem"}} >
-            <img src={mealImage} className="card-img-top" alt={mealImage}/>
+        <div className="col-md-4">
+        <div className="card text-center" style={{width: 18 + "rem"}} >
+            <img src={mealImage} className="card-img-top height-medium" alt={mealImage}/>
             <div className="card-body">
+                <div className="col">
                 <h5 className="card-title">{mealName}</h5>
-                <p className="card-price">{mealPrice}</p>
-                {/* <a href="#" class="btn btn-primary">Add to Cart</a> */}
-                <Link to={"/meal/"+mealId} className="btn btn-primary">Add to Cart</Link>
-            </div>
+                <p  className="card-category">{mealCategory}</p>
+                <p className="card-price">{mealPrice}</p>      
+            </div>     
         </div>
+        </div>
+        </div>
+        
     )
 
 }
