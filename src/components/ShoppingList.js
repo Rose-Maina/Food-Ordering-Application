@@ -6,14 +6,12 @@ import Item from "./Item";
 function ShoppingList() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [items, setItems] = useState([]);
+ 
 
   useEffect(() => {
     fetch("https://afternoon-bastion-34435.herokuapp.com/menu")
       .then((r) => r.json())
       .then((items) => 
-    //   {const meal = items.meals[0]}
-
-      // console.log(items))
      setItems(items));
   }, []);
 
