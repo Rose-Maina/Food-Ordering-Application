@@ -22,6 +22,7 @@ The application can be accessed using https://rose-maina.github.io/food-ordering
 1. HTML
 2. CSS
 3. ReactJS
+4. Bootstrap
 
 # License
 MIT LIcense
