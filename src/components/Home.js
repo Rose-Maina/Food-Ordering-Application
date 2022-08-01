@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // import { alignPropType } from "react-bootstrap/esm/types";
 import MenuCard from "./MenuCard";
 
-const RestaurantMeals = "https://salty-garden-01634.herokuapp.com/menu"
+const RestaurantMeals = "https://nameless-fortress-22217.herokuapp.com/menu"
 
 function Home(){
 
