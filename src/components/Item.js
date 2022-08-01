@@ -1,16 +1,20 @@
 import React from "react";
 
-function Item({ item, onUpdateItem, onDeleteItem }) {
+function Item({ id, item, items, setItems, onUpdateItem }) {
+  
   function handleDeleteClick() {
-    fetch(`https://afternoon-bastion-34435.herokuapp.com/menu${item.id}`, {
+    fetch(`https://afternoon-bastion-34435.herokuapp.com/menu/${id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
-      .then(() => onDeleteItem(item));
+      .then(() => {
+        const updatedItems = items.filter((itemName) => itemName.id !== id);
+        setItems(updatedItems);
+      })
   }
 
   function handleAddToCartClick() {
-    fetch(`https://afternoon-bastion-34435.herokuapp.com/menu${item.id}`, {
+    fetch(`https://afternoon-bastion-34435.herokuapp.com/menu${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

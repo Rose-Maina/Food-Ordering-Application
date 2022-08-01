@@ -111,8 +111,9 @@ header button {
 
 .Items li .category {
   justify-self: end;
-  color: var(--font-color-light);
-  font-size: 0.8em;
+  /* color: var(--font-color-light); */
+  font-size: 2em;
+  color: white;
 }
 
 .NewItem {
@@ -130,7 +131,8 @@ header button {
 }
 
 .NewItem label {
-  font-size: 0.8em;
+  font-size: 2em;
+  color: black;
   display: flex;
   flex-direction: column;
   flex: 1;

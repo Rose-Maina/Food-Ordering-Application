@@ -1,16 +1,15 @@
 import React from "react";
 
-function Filter({ category, onCategoryChange }) {
-
+function Filter({ category, onCategoryChange}) {
+ 
   return (
     <div className="Filter">
       <select
         name="filter"
-        // value={itemName}
         value={category}
         onChange={(e) => onCategoryChange(e.target.value)}
       >
-        {/* <option value="All">Filter by category</option> */}
+        <option value="All">Filter by category</option>
         <option value="Break Your Fast">Break Your Fast</option>
         <option value="Time For Lunch">Time For Lunch</option>
         <option value="Dinner">Dinner</option>
@@ -24,4 +23,4 @@ function Filter({ category, onCategoryChange }) {
   );
 }
 
-export default Filter;
+export default React.memo(Filter);

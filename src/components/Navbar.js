@@ -1,5 +1,4 @@
 import React from "react";
-import ShoppingList from "./ShoppingList";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
