@@ -9,7 +9,7 @@ function ShoppingList() {
  
 
   useEffect(() => {
-    fetch("https://afternoon-bastion-34435.herokuapp.com/menu")
+    fetch("https://salty-garden-01634.herokuapp.com/menu")
       .then((r) => r.json())
       .then((items) => 
      setItems(items));

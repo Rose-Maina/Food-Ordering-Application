@@ -11,7 +11,7 @@ function ItemForm({ onAddItem }) {
       category: category,
       isInCart: false,
     };
-    fetch("https://afternoon-bastion-34435.herokuapp.com/menu", {
+    fetch("https://salty-garden-01634.herokuapp.com/menu", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

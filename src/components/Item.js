@@ -3,7 +3,7 @@ import React from "react";
 function Item({ id, item, items, setItems, onUpdateItem }) {
   
   function handleDeleteClick() {
-    fetch(`https://afternoon-bastion-34435.herokuapp.com/menu/${id}`, {
+    fetch(`https://salty-garden-01634.herokuapp.com/menu/${id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
@@ -14,7 +14,7 @@ function Item({ id, item, items, setItems, onUpdateItem }) {
   }
 
   function handleAddToCartClick() {
-    fetch(`https://afternoon-bastion-34435.herokuapp.com/menu${id}`, {
+    fetch(`https://salty-garden-01634.herokuapp.com/menu/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
